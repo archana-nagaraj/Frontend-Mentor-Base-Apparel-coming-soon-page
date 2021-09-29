@@ -1,6 +1,6 @@
 # Frontend Mentor - Base Apparel coming soon page solution
 
-This is a solution to the [Base Apparel coming soon page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Base Apparel coming soon page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -12,7 +12,6 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 - [Author](#author)
-
 
 ## Overview
 
@@ -28,8 +27,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Screen_Mobile_375 <br>
+![Screen_375](./finalOutcome/Screen_375.png)
 
+Screen_laptop_1440 <br>
+![Screen_1440](./finalOutcome/Screen_1440.png)
 
 ### Links
 
@@ -45,7 +47,6 @@ Users should be able to:
 - Mobile-first workflow
 - Saas
 
-
 ### What I learned
 
 - Saas
@@ -54,7 +55,6 @@ Users should be able to:
   - import
   - functions
 - Javascript
-
 
 ## Author
 
