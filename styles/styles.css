@@ -1,6 +1,6 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -8,5 +8,237 @@
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+
+.left {
+  background: url("/images/bg-pattern-desktop.svg");
+  background-size: cover;
+  width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+  .left {
+    width: 100%;
+    padding-bottom: 1.875rem;
+  }
+}
+
+.left .inner-container {
+  max-width: 25rem;
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .left .inner-container {
+    max-width: 22.5rem;
+    margin: auto;
+  }
+}
+
+.left .inner-container .logo {
+  margin-top: 3.125rem;
+  padding-bottom: 3.75rem;
+}
+
+@media screen and (max-width: 600px) {
+  .left .inner-container .logo {
+    margin-top: 3.125rem;
+    padding-bottom: 1.875rem;
+    width: 100px;
+  }
+}
+
+.left .inner-container .bg-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .left .inner-container .bg-mobile {
+    display: block;
+    margin-left: -40px;
+    margin-right: -40px;
+    width: calc(100% + 80px);
+    padding-bottom: 3.125rem;
+  }
+}
+
+.left .inner-container h1 {
+  padding-bottom: 1.875rem;
+  font-size: 2.5rem;
+  letter-spacing: 1.25rem;
+  width: 21.875rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.1;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: comeinleft 0.75s ease forwards;
+          animation: comeinleft 0.75s ease forwards;
+}
+
+@media screen and (max-width: 600px) {
+  .left .inner-container h1 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15px;
+  }
+}
+
+.left .inner-container h1 span {
+  font-weight: 300;
+  color: #ce9797;
+}
+
+@media screen and (max-width: 600px) {
+  .left .inner-container h1 span {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15px;
+  }
+}
+
+.left .inner-container p {
+  font-size: 1rem;
+  padding-bottom: 2.5rem;
+  color: #ce9797;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 600px) {
+  .left .inner-container {
+    padding: 15px;
+  }
+}
+
+.left .inner-container form {
+  position: relative;
+}
+
+.left .inner-container form input {
+  font-size: 1.125rem;
+  border-radius: 1.875rem;
+  padding-top: 0.9375rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.9375rem;
+  padding-left: 1.25rem;
+  width: 100%;
+  border: solid 0.06rem #ce9797;
+  background-color: transparent;
+}
+
+.left .inner-container form input::-webkit-input-placeholder {
+  font-weight: 300;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #ce9797;
+}
+
+.left .inner-container form input:-ms-input-placeholder {
+  font-weight: 300;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #ce9797;
+}
+
+.left .inner-container form input::-ms-input-placeholder {
+  font-weight: 300;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #ce9797;
+}
+
+.left .inner-container form input::placeholder {
+  font-weight: 300;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #ce9797;
+}
+
+.left .inner-container form input:focus {
+  border-width: 2px;
+  border: 2px solid #f96262;
+  outline: none;
+}
+
+.left .inner-container form .mybtn {
+  width: 6.25rem;
+  height: 3.4375rem;
+  padding-top: 0.9375rem;
+  padding-right: 0.9375rem;
+  padding-bottom: 0.9375rem;
+  padding-left: 0.9375rem;
+  border-radius: 3.125rem;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  -webkit-box-shadow: 2px 5px 10px #ce9797;
+          box-shadow: 2px 5px 10px #ce9797;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.left .inner-container form .mybtn:hover {
+  opacity: 0.8;
+}
+
+.left .inner-container form .error-icon {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 110px;
+}
+
+.left .inner-container form small {
+  margin-top: 0.9375rem;
+  margin-left: 1.875rem;
+  font-weight: 300;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #ce9797;
+  display: none;
+}
+
+form.error .error-icon {
+  display: block;
+}
+
+form.error small {
+  display: block;
+}
+
+@-webkit-keyframes comeinleft {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes comeinleft {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.right {
+  background-image: url("/images/hero-desktop.jpg");
+  width: 40%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 600px) {
+  .right {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

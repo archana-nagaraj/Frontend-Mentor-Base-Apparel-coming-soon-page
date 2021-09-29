@@ -1,12 +1,183 @@
 @import '_variables';
+// @import '../script.js';
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Josefin Sans', sans-serif;
   @include toRem(font-size, 16);
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left {
+  background: url('/images/bg-pattern-desktop.svg');
+  background-size: cover;
+  width: 60%;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    @include toRem(padding-bottom, 30);
+  }
+
+  .inner-container {
+    @include toRem(max-width, 400);
+    margin: auto;
+    @media screen and (max-width: 600px) {
+      @include toRem(max-width, 360);
+      margin: auto;
+    }
+    .logo {
+      @include toRem(margin-top, 50);
+      @include toRem(padding-bottom, 60);
+      @media screen and (max-width: 600px) {
+        @include toRem(margin-top, 50);
+        @include toRem(padding-bottom, 30);
+        width: 100px;
+      }
+    }
+    .bg-mobile {
+      @media screen and (max-width: 600px) {
+        display: block;
+        margin-left: -40px;
+        margin-right: -40px;
+        width: calc(100% + 80px);
+        @include toRem(padding-bottom, 50);
+      }
+      display: none;
+    }
+
+    h1 {
+      @include toRem(padding-bottom, 30);
+      @include toRem(font-size, 40);
+      @include toRem(letter-spacing, 20);
+      @include toRem(width, 350);
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 1.1;
+      transform: translateX(-100%);
+      @media screen and (max-width: 600px) {
+        align-items: center;
+        padding: 15px;
+      }
+      span {
+        font-weight: 300;
+        color: $primary-Desaturated-Red;
+        @media screen and (max-width: 600px) {
+          align-items: center;
+          padding: 15px;
+        }
+      }
+      animation: comeinleft 0.75s ease forwards;
+    }
+    p {
+      @include toRem(font-size, 16);
+      @include toRem(padding-bottom, 40);
+      color: $primary-Desaturated-Red;
+      line-height: 1.5;
+      font-weight: 300;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 15px;
+    }
+    form {
+      position: relative;
+      //   @include toRem(height, 55);
+      input {
+        @include toRem(font-size, 18);
+        @include toRem(border-radius, 30);
+        @include toRem(padding-top, 15);
+        @include toRem(padding-right, 20);
+        @include toRem(padding-bottom, 15);
+        @include toRem(padding-left, 20);
+        width: 100%;
+        border: solid 0.06rem $primary-Desaturated-Red;
+        background-color: transparent;
+        &::placeholder {
+          font-weight: 300;
+          font-family: 'Josefin Sans', sans-serif;
+          color: $primary-Desaturated-Red;
+        }
+        &:focus {
+          border-width: 2px;
+          border: 2px solid $primary-Soft-Red;
+          outline: none;
+        }
+      }
+
+      .mybtn {
+        @include toRem(width, 100);
+        @include toRem(height, 55);
+        @include toRem(padding-top, 15);
+        @include toRem(padding-right, 15);
+        @include toRem(padding-bottom, 15);
+        @include toRem(padding-left, 15);
+        @include toRem(border-radius, 50);
+        background-image: linear-gradient(
+          135deg,
+          hsl(0, 80%, 86%),
+          hsl(0, 74%, 74%)
+        );
+        box-shadow: 2px 5px 10px $primary-Desaturated-Red;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: opacity 0.2s ease;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .error-icon {
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 110px;
+      }
+
+      small {
+        @include toRem(margin-top, 15);
+        @include toRem(margin-left, 30);
+        font-weight: 300;
+        font-family: 'Josefin Sans', sans-serif;
+        color: $primary-Desaturated-Red;
+        display: none;
+      }
+    }
+  }
+}
+
+form.error {
+  .error-icon {
+    display: block;
+  }
+  small {
+    display: block;
+  }
+}
+
+// Animation
+@keyframes comeinleft {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.right {
+  background-image: url('/images/hero-desktop.jpg');
+  width: 40%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
